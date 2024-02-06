@@ -1,0 +1,136 @@
+
+.otp-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 5%;
+
+    font-family: 'Titillium Web', 'Libre Baskerville', Arial, Helvetica, sans-serif;
+}
+
+.otp-box {
+    border-radius: 5px;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    max-width: 100%;
+    background: #fff;
+    border: 1px solid #eaebeb;
+    -webkit-box-shadow: 0 4px 8px rgba(146,151,155,.15);
+    box-shadow: 0 4px 8px rgba(146,151,155,.15);
+    padding-top: 2em;
+    width: 36em;
+}
+
+.otp-box-content {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-bottom: 2.5em;
+    margin: 2rem;
+}
+
+.otp-box-content > img {
+    margin-left: 25px;
+    text-align: center;
+}
+
+.otp-box-content > p, .otp-box-content > a {
+    display: block;
+    text-align: center;
+}
+
+.otp-box-content > .otp-highlight-text {
+    font-weight: 500;
+    font-size: 1.6em;
+    margin: 1em;
+    color: #555;
+}
+
+.otp-box-content > .otp-logo {
+    font-size: 3em;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+
+.otp-input-row {
+    text-align: left;
+    margin: auto;
+    max-width: 22em;
+    padding: 1em 8px 0;
+}
+
+.otp-input-row > label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.otp-input-row > input {
+    position: relative;
+    -webkit-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    text-align: left;
+    font: inherit;
+    color: "#333333";
+    padding: 0.5em 1em;
+    border: 1px solid #cacaca;
+    margin: 0;
+    border-radius: 5px;
+
+    display: block;
+    font-size: 1em;
+    width: 100%;
+}
+
+.otp-button {
+    margin: 15px 0;
+    max-width: unset;
+
+    display: block;
+
+    border-radius: 5px;
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+    font-weight: 300;
+
+    background-color: #7973fd;
+    padding: 8px 8px;
+    width: 100%;
+
+    position: relative;
+    user-select: none;
+    appearance: none;
+    cursor: pointer;
+    text-decoration: none;
+    font: inherit;
+    color: #fff;
+    border: 0;
+
+}
+
+.otp-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.otp-anchor {
+    position: relative;
+    user-select: none;
+    appearance: none;
+    cursor: pointer;
+    font: inherit;
+
+    text-align: center;
+}
+
+.otp-issuing-form-error {
+    color: red;
+}
