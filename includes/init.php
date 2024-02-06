@@ -27,23 +27,36 @@ function remove_otp_table()
 
 function init_smtp_email($phpmailer)
 {
-    $otp_smtp_host = get_option('otp_smtp_host', '');
-    $otp_smtp_port = get_option('otp_smtp_port', '');
-    $otp_smtp_encryption_secure = get_option('otp_smtp_encryption_secure', '');
-    $otp_smtp_user = get_option('otp_smtp_user', '');
-    $otp_smtp_password = get_option('otp_smtp_password', '');
-    $otp_smtp_from_address = get_option('otp_smtp_from_address', '');
-    $otp_smtp_from_name = get_option('otp_smtp_from_name', '');
-
-    $phpmailer->isSMTP();
-    $phpmailer->Host       = $otp_smtp_host;
-    $phpmailer->SMTPAuth   = true;
-    $phpmailer->Port       = $otp_smtp_port;
-    $phpmailer->SMTPSecure = $otp_smtp_encryption_secure;
-    $phpmailer->Username   = $otp_smtp_user;
-    $phpmailer->Password   = $otp_smtp_password;
-    $phpmailer->From       = $otp_smtp_from_address;
-    $phpmailer->FromName   = $otp_smtp_from_name; 
+    if (!isset(SMTP_USER) || !isset(SMTP_PASS) || !isset(SMTP_HOST)) {
+        $otp_smtp_host = get_option('otp_smtp_host', '');
+        $otp_smtp_port = get_option('otp_smtp_port', '');
+        $otp_smtp_encryption_secure = get_option('otp_smtp_encryption_secure', '');
+        $otp_smtp_user = get_option('otp_smtp_user', '');
+        $otp_smtp_password = get_option('otp_smtp_password', '');
+        $otp_smtp_from_address = get_option('otp_smtp_from_address', '');
+        $otp_smtp_from_name = get_option('otp_smtp_from_name', '');
+    
+        $phpmailer->isSMTP();
+        $phpmailer->Host       = $otp_smtp_host;
+        $phpmailer->SMTPAuth   = true;
+        $phpmailer->Port       = $otp_smtp_port;
+        $phpmailer->SMTPSecure = $otp_smtp_encryption_secure;
+        $phpmailer->Username   = $otp_smtp_user;
+        $phpmailer->Password   = $otp_smtp_password;
+        $phpmailer->From       = $otp_smtp_from_address;
+        $phpmailer->FromName   = $otp_smtp_from_name; 
+    }
+    else {
+        $phpmailer->isSMTP();
+        $phpmailer->Host       = SMTP_HOST;
+        $phpmailer->SMTPAuth   = SMTP_AUTH;
+        $phpmailer->Port       = SMTP_PORT;
+        $phpmailer->SMTPSecure = SMTP_SECURE;
+        $phpmailer->Username   = SMTP_USER;
+        $phpmailer->Password   = SMTP_PASS;
+        $phpmailer->From       = SMTP_FROM;
+        $phpmailer->FromName   = SMTP_NAME;
+    }
 }
 
 
