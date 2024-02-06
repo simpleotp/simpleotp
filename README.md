@@ -49,13 +49,13 @@ This plugin can use ReCaptcha to mitigate malicious users taking advantage of yo
 This plugin makes use of WordPress' `wp_mail` function. So setting up your SMTP service can be done on our options page and will be used to issue emails from the plugin. If you already have an email service configured make sure that the names of the attributes in your `wp-config.php` file match these names: `SMTP_HOST`, `SMTP_AUTH`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, `SMTP_SECURE`, `SMTP_FROM`, `SMTP_NAME`.
 
 
-### Privacy Statement
+## Privacy Statement
 
-#### Types of Data We Collect
+### Types of Data We Collect
 
-We temporarily store your email on the server session but it is immediately deleted once you have inputted the OTP code
+We temporarily store your email on the server session but it is immediately deleted once you have submitted a correct OTP code
 
-#### Third-Party Access To Data
+### Third-Party Access To Data
 
 We do not give your data to any third-party services
 

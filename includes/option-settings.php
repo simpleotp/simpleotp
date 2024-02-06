@@ -2,10 +2,6 @@
 
 function otp_options_init()
 {
-    register_setting(
-        'otp_options_group',
-        'otp_issuing_page'
-    );
 
     register_setting(
         'otp_options_group',
@@ -363,6 +359,8 @@ function render_otp_options()
                         <input name="otp_dev_mode" type="checkbox" value="otp_dev_mode" <?php echo get_option('otp_dev_mode', '') === "otp_dev_mode" ? "checked" : ""; ?> />
                     </td>
                 </tr>
+                <input name="otp_issuing_page_slug" type="hidden" value="<?php echo get_option('otp_issuing_page_slug') ?>" />
+                <input name="otp_success_page_slug" type="hidden" value="<?php echo get_option('otp_success_page_slug') ?>" />
             </table>
             <p class="submit">
                 <input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" />
