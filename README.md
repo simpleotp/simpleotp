@@ -41,7 +41,7 @@ This must be a randomly generated string of numbers and letters at least 32 char
 
 #### ReCaptcha:
 
-This plugin can use ReCaptcha to mitigate malicious users taking advantage of your site. You can set up a ReCaptcha account to create a server key and a site key [here] (https://www.google.com/recaptcha/admin/enterprise)
+This plugin can use ReCaptcha to mitigate malicious users taking advantage of your site. You can set up a ReCaptcha account to create a server key and a site key [here](https://www.google.com/recaptcha/admin/enterprise)
 
 #### SMTP: 
 
@@ -54,7 +54,7 @@ This plugin makes use of WordPress' `wp_mail` function. So setting up your SMTP 
 
 ### Where can I suggest a new feature or report a bug?
 
-Please use [the issue tracker on our GitLab repo](https://gitlab.com/) as it's easier to keep track of issues there, rather than on the wordpress.org support forums.
+Please use [the issue tracker on our GitLab repo](https://github.com/simpleotp/simpleotp) as it's easier to keep track of issues there, rather than on the wordpress.org support forums.
 
 
 ## Changelog ##
